@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/superAdmin_dashboard.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="dashboard-title">Super Admin Dashboard</h1>
+        <div class="dashboard-sections">
+            <section class="dashboard-card">
+                <h2>Approve Recruiters</h2>
+                <p>Review and approve recruiter accounts to ensure legitimacy.</p>
+                <a href="{% url 'approve_recruiters' %}" class="btn">Approve Recruiters</a>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Recruitment Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/recruiter_dashboard.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="dashboard-title">Recruiter Dashboard</h1>
+        <div class="dashboard-sections">
+            <section class="dashboard-card">
+                <h2>Manage Job Postings</h2>
+                <p>Create, update, or delete job postings.</p>
+                <a href="{% url 'manage_job_postings' %}" class="btn">Manage Jobs</a>
+            </section>
+            <section class="dashboard-card">
+                <h2>Search Applicants</h2>
+                <p>Find applicants by skills and qualifications.</p>
+                <a href="{% url 'search_applicants' %}" class="btn">Search Applicants</a>
+            </section>
+            <section class="dashboard-card">
+                <h2>Request Interviews</h2>
+                <p>Send interview requests to applicants.</p>
+                <a href="{% url 'request_interviews' %}" class="btn">Request Interviews</a>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Recruitment Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

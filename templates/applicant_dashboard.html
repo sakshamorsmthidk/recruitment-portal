@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="dashboard-title">Welcome to Your Dashboard</h1>
+        <div class="dashboard-sections">
+            <section class="dashboard-card">
+                <h2>Job Postings</h2>
+                <p>View and apply to available job postings.</p>
+                <a href="{% url 'job_postings' %}" class="btn">View Jobs</a>
+            </section>
+            <section class="dashboard-card">
+                <h2>Application Status</h2>
+                <p>Track the status of your job applications.</p>
+                <a href="{% url 'application_status' %}" class="btn">Track Applications</a>
+            </section>
+            <section class="dashboard-card">
+                <h2>Resume Upload</h2>
+                <p>Upload or update your resume.</p>
+                <a href="{% url 'upload_resume' %}" class="btn">Upload Resume</a>
+            </section>
+            <section class="dashboard-card">
+                <h2>Interview Requests</h2>
+                <p>Accept or reject interview requests.</p>
+                <a href="{% url 'interview_requests' %}" class="btn">Manage Requests</a>
+            </section>
+            <section class="dashboard-card">
+                <h2>Skills</h2>
+                <p>Add or update your skills.</p>
+                <a href="{% url 'update_skills' %}" class="btn">Update Skills</a>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Recruitment Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
